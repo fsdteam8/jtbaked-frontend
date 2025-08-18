@@ -41,8 +41,6 @@ export const authOptions: NextAuthOptions = {
 
           const response = await res.json();
 
-          console.log(response);
-
           if (!res.ok || !response?.status) {
             throw new Error(response?.message || "Login failed");
           }
