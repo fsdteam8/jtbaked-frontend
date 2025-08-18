@@ -5,7 +5,7 @@ import BannerSection from '@/components/homeHeaders/BannerSection'
 const page = () => {
   return (
     <div>
-        <BannerSection image='/password.jpg' title='About us' description="Here are the products you've saved. You can remove items or contact us to learn more."/>
+        <BannerSection image='/pexels2.jpg' title='About us' description="Here are the products you've saved. You can remove items or contact us to learn more."/>
         <AboutSection/>
     </div>
   )
