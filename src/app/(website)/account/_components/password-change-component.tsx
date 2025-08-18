@@ -87,13 +87,12 @@ export default function PasswordChangeComponent({ setChange }: ProfileInfoCompon
     }
 
     const handleLogout = () => {
-        console.log("Logout clicked from password change")
         // logout logic here
     }
 
     return (
         <div>
-            <BannerSection image={"/password.jpg"} />
+            <BannerSection image={"/pexels1.jpg"} />
             <div className="min-h-screen py-8">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="rounded-lg shadow-sm p-6">
