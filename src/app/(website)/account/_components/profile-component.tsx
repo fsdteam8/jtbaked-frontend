@@ -228,7 +228,7 @@ export default function ProfileInfoComponent({ setChange }: ProfileInfoComponent
 
     return (
         <div>
-            <BannerSection image={'/account.jpg'} />
+            <BannerSection image={'/pexels2.jpg'} />
             <div className="min-h-screen bg-[#F8FEFF] py-8">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <form onSubmit={handleSubmit(onSubmit)}>
