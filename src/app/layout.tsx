@@ -7,6 +7,7 @@ import "./globals.css";
 // import { ThemeFetcher } from "@/lib/ThemeFetcher"
 import AuthProvider from "@/components/provider/AuthProvider";
 import { CrispProvider } from "@/provider/crisp-provider";
+import ProtectedFeature from "@/provider/PinLock";
 import { Manrope } from "next/font/google";
 import { cookies } from "next/headers";
 
@@ -38,14 +39,16 @@ export default function RootLayout({
         <style>{`:root { --primary: ${primaryColor}; }`}</style>
       </head>
       <body className={`${manrope.variable} antialiased`}>
-        <AuthProvider>
-          <Providers>
-            <ThemeFetcher />
-            {children}
-            <Toaster />
-            <CrispProvider />
-          </Providers>
-        </AuthProvider>
+        <ProtectedFeature>
+          <AuthProvider>
+            <Providers>
+              <ThemeFetcher />
+              {children}
+              <Toaster />
+              <CrispProvider />
+            </Providers>
+          </AuthProvider>
+        </ProtectedFeature>
       </body>
     </html>
   );
