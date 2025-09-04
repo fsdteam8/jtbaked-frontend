@@ -11,7 +11,8 @@ import {
 } from "@/components/ui/card";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import { setCookie } from "cookies-next";
+// import { setCookie } from "cookies-next";
+import { setCookie } from "nookies";
 import { useEffect, useState } from "react";
 import "../app/globals.css";
 
@@ -36,7 +37,7 @@ export default function ProtectedFeature({ children }: Props) {
 
   const handleVerify = () => {
     if (otp === pin) {
-      setCookie("authorized", "true", { maxAge: 60 * 60 * 24 * 7 });
+      setCookie(null, "authorized", "true", { maxAge: 60 * 60 * 24 * 7 });
       setIsAuthorized(true);
     } else {
       alert("Invalid OTP");
