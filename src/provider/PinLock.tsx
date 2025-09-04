@@ -56,7 +56,7 @@ export default function ProtectedFeature({ children }: Props) {
             <CardHeader>
               <CardTitle>Enter OTP</CardTitle>
               <CardDescription>
-                Please enter the OTP to access this feature.
+                Please Enter The OTP to Access This Feature.
               </CardDescription>
             </CardHeader>
             <CardContent>
